@@ -50,6 +50,7 @@ struct dataType : Identifiable {
     var desc : String
     var url : String
     var image : String
+    var publishedAt: String
 }
 
 class getNewsData : ObservableObject {
@@ -77,10 +78,12 @@ class getNewsData : ObservableObject {
                 let url = i.1["url"].stringValue
                 let image = i.1["urlToImage"].stringValue
                 let id = i.1["publishedAt"].stringValue
-
+                let tempPublished = i.1["publishedAt"].stringValue
+                let publishedAt = tempPublished.replacingOccurrences(of: "T", with: " ").replacingOccurrences(of: "Z", with: "").replacingOccurrences(of: "-", with: "/")
+                
                 
                 DispatchQueue.main.async {
-                    self.datas.append(dataType(id: id, title: title, desc: description, url: url, image: image))
+                    self.datas.append(dataType(id: id, title: title, desc: description, url: url, image: image, publishedAt: publishedAt))
                 }
                 
                 
@@ -110,6 +113,7 @@ struct NewsView : View {
     
     @ObservedObject var list = getNewsData()
     
+    //add date
     var body: some View{
         NavigationView {
             List(list.datas) {i in
@@ -121,17 +125,19 @@ struct NewsView : View {
                     HStack(spacing: 15){
                         
                         if i.image != ""{
-                            WebImage(url: URL(string: i.image)!, options: .highPriority, context: nil).resizable().frame(width: 110, height: 85)
-                        }                        
+                            WebImage(url: URL(string: i.image)!, options: .highPriority, context: nil).resizable().frame(width: 120, height: 85)
+                        }
                         
                         VStack(alignment: .leading, spacing: 10){
-                            Text(i.title).fontWeight(.heavy)
-                            Text(i.desc).lineLimit(2)
+                            Text(i.title).fontWeight(.medium)
+//                            Text(i.desc).lineLimit(2)
+                            Text(i.publishedAt).font(.system(size: 12))                                        .foregroundColor(.gray)
+
                         }
                         
                         
                         
-                    }.padding(.vertical, 15)
+                    }.padding(.vertical, 5)
                 }
             }.navigationBarTitle("Headlines")
         }
@@ -217,7 +223,8 @@ struct Home : View {
                             VStack(spacing: 12){
                                 Text("Affected").fontWeight(.bold)
                                 Text("\(self.main.cases)").fontWeight(.bold)
-                                    .font(.title)
+                                    
+//                                .font(.title)
                             }
                             .padding(.vertical)
                             .frame(width: (UIScreen.main.bounds.width / 2) - 30)
@@ -227,7 +234,7 @@ struct Home : View {
                             
                             VStack(spacing: 12){
                                 Text("Deaths").fontWeight(.bold)
-                                Text("\(self.main.deaths)").fontWeight(.bold).font(.title)
+                                Text("\(self.main.deaths)").fontWeight(.bold)
                             }
                             .padding(.vertical)
                             .frame(width: (UIScreen.main.bounds.width / 2) - 30)
@@ -320,7 +327,7 @@ struct Home : View {
                     .padding(.horizontal)
                     .background(Color.white)
                     .cornerRadius(20)
-                    .padding(.bottom, -30)
+                    .padding(.bottom, -16)
                     .offset(y: -30)
                 }
             }
