@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED116C6424623D73004B357A /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED116C6324623D73004B357A /* Countries.swift */; };
+		ED116C6724625D69004B357A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = ED116C6624625D69004B357A /* SwiftyJSON */; };
+		ED116C6A24625DAC004B357A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = ED116C6924625DAC004B357A /* SDWebImageSwiftUI */; };
 		EDE717722460B9950061D04D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE717712460B9950061D04D /* AppDelegate.swift */; };
 		EDE717742460B9950061D04D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE717732460B9950061D04D /* SceneDelegate.swift */; };
 		EDE717762460B9950061D04D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE717752460B9950061D04D /* ContentView.swift */; };
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED116C6324623D73004B357A /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 		EDE7176E2460B9950061D04D /* simple-covid-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "simple-covid-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE717712460B9950061D04D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDE717732460B9950061D04D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED116C6A24625DAC004B357A /* SDWebImageSwiftUI in Frameworks */,
+				ED116C6724625D69004B357A /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +112,7 @@
 				EDE7177C2460B9970061D04D /* LaunchScreen.storyboard */,
 				EDE7177F2460B9970061D04D /* Info.plist */,
 				EDE717792460B9970061D04D /* Preview Content */,
+				ED116C6324623D73004B357A /* Countries.swift */,
 			);
 			path = "simple-covid-tracker";
 			sourceTree = "<group>";
@@ -152,6 +159,10 @@
 			dependencies = (
 			);
 			name = "simple-covid-tracker";
+			packageProductDependencies = (
+				ED116C6624625D69004B357A /* SwiftyJSON */,
+				ED116C6924625DAC004B357A /* SDWebImageSwiftUI */,
+			);
 			productName = "simple-covid-tracker";
 			productReference = EDE7176E2460B9950061D04D /* simple-covid-tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +235,10 @@
 				Base,
 			);
 			mainGroup = EDE717652460B9940061D04D;
+			packageReferences = (
+				ED116C6524625D69004B357A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				ED116C6824625DAC004B357A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = EDE7176F2460B9950061D04D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,6 +284,7 @@
 			files = (
 				EDE717722460B9950061D04D /* AppDelegate.swift in Sources */,
 				EDE717742460B9950061D04D /* SceneDelegate.swift in Sources */,
+				ED116C6424623D73004B357A /* Countries.swift in Sources */,
 				EDE717762460B9950061D04D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"simple-covid-tracker/Preview Content\"";
+				DEVELOPMENT_TEAM = C8K8VG6493;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "simple-covid-tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,6 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"simple-covid-tracker/Preview Content\"";
+				DEVELOPMENT_TEAM = C8K8VG6493;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "simple-covid-tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -588,6 +606,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED116C6524625D69004B357A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		ED116C6824625DAC004B357A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED116C6624625D69004B357A /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED116C6524625D69004B357A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		ED116C6924625DAC004B357A /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED116C6824625DAC004B357A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDE717662460B9940061D04D /* Project object */;
 }

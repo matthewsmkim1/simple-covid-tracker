@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+var countryList = [
+    "Afghanistan",
+    "Albania",
+    "Colombia",
+    "Timor-Leste",
+    "UK",
+    "USA",
+    "Venezuela",
+    "Viet Name",
+]
