@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED02FB36246644930093312F /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02FB35246644930093312F /* News.swift */; };
 		ED116C6424623D73004B357A /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED116C6324623D73004B357A /* Countries.swift */; };
 		ED116C6724625D69004B357A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = ED116C6624625D69004B357A /* SwiftyJSON */; };
 		ED116C6A24625DAC004B357A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = ED116C6924625DAC004B357A /* SDWebImageSwiftUI */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED02FB35246644930093312F /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		ED116C6324623D73004B357A /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 		EDE7176E2460B9950061D04D /* simple-covid-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "simple-covid-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE717712460B9950061D04D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				EDE7177F2460B9970061D04D /* Info.plist */,
 				EDE717792460B9970061D04D /* Preview Content */,
 				ED116C6324623D73004B357A /* Countries.swift */,
+				ED02FB35246644930093312F /* News.swift */,
 			);
 			path = "simple-covid-tracker";
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				EDE717722460B9950061D04D /* AppDelegate.swift in Sources */,
 				EDE717742460B9950061D04D /* SceneDelegate.swift in Sources */,
 				ED116C6424623D73004B357A /* Countries.swift in Sources */,
+				ED02FB36246644930093312F /* News.swift in Sources */,
 				EDE717762460B9950061D04D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
